@@ -1,4 +1,4 @@
-    :root{
+:root {
     --color_title: #080808;
     --color_title_rgb: 8, 8, 8;
     --color_body: #101010;
@@ -12,7 +12,7 @@
     --color_search: #000;
     --color_search_rgb: 0, 0, 0;
     --color_border_out: #e3e5e8;
-    --color_border_out_rgb: 227, 229, 232;
+    --color_border_out_rgb: 227, 229, 226;
     --color_border_in: #ebebeb;
     --color_border_in_rgb: 235, 235, 235;
     --color_border_in_divider: #ebebeb;
@@ -61,100 +61,167 @@
     --color_calendar_rgb: 235, 91, 91;
     --color_dic: #031f5f;
     --color_dic_rgb: 3, 31, 95;
-    }
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    background: none;    
+    padding: 0;
+    width:0px;
+    height: 0px;
+    border: none;
+}
+html,body{
+    background: none;
+    margin:0;
+    border: none;
+}
 
-    *{ box-sizing: border-box; margin: 0; padding: 0;  }
+#wrap{
+    min-width: 1340px;
+    text-align: center;
+}
 
-    #wrap{
+header{
+    width: 1280px;
+    height: 266px;
+}
+#banner{
+    position: relative;
+    width: 100%;
+}
+#hamburger,#pay,#talk,#noti{
+    position: absolute;
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background: none;
+}
 
-        min-width: 1340px;    
-    }
+#hamburger{
+    top: 18px;
+    left: 20px;
+}
+#pay{
+    padding: 7px;
+}
 
-    #header{
+#talk{
+    top: 25px;
+    right: 40px;
+}
+s
+#noti{
+    top: 25px;
+    right: 75px;
+}
 
-        height: 2000px;
-    }
+#hamburger>div,.icon,#talk>div,#noti>div{
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-size: 444px 434px;
+    background-repeat: no-repeat;
+    background-image: url(image/sp_main.ae81c9d5.png);
+    z-index: 1;
+}
 
-    #banner{
-        position: relative;
-        height: 156px;
-        padding: 70px 0 42px;
-    }
+#hamburger>div{
+   
+    background-position: -314px -330px; 
+}    
 
-    #hamberger,#pay,#talk,#notify{
-        position: absolute;
-        top: 18px;
-        padding: 10;
-        background: 0z;
-        border: 0;
-        cursor: pointer;
-        content: "";
-        background-image: url('image/sp_main.ae81c9d5.png');
-        background-size: 444px 434px ;
-        background-repeat:no-repeat ;
-        width:26px; 
-        height: 26px;
-    }
+.icon{
+    display:inline-block;
+    left: 80px;
+    top: 25px;
+}
 
-    #hamburger{
-        left: -10px;
-        background-position: -314px -330px; 
-    }
-
-
-    #pay{
-        left: 43px;
-    }
-
-    #talk{
-        right: 40px;
-        background-position: -295px -177px; 
-        width: 33px;
-        height: 33px;
-    }
-
-    #notify{
-        right: -10px;
-        width: 46px;
-        background-position: -364px -27px;
-    }
-
-    #hamburger:hover::after,#pay:hover::after,#talk:hover::after,#notify:hover::after{
-        content: "";
-        position: relative;
-        background-image: url('image/sp_main.ae81c9d5.png');
-        background-size: 444px 434px ;
-        background-color: var(--color_option_bg);
-        background-repeat:no-repeat ;
-        width:26px; 
-        height: 26px;
-        border-radius: 50%;
-    }
-
-    #hamburger:hover::after{
-        background-position: -314px -330px; 
-    }
-
-    #pay:hover::after{
-        background-position: -295px -177px; 
-        width: 33px;
-        height: 33px;
-    }
+.pay-icon{
+    width: 32px;
+    height: 32px;
+    background-size: 444px 434px;
+    background-position: -295px -177px;
     
-    #talk:hover::after{
-        background-position: -364px -81px;
-    }
+    z-index: 1;
 
+}
 
-    #notify:hover::after{
-        background-position: -364px -27px;
-    }
+#talk>div{
+background-position: -364px -81px;
+}
 
-    .blind{
-        position: absolute;
-        clip: rect(0 0 0 0);
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-    }
+#noti>div{
+    background-position: -364px -27px;
+}
+
+#hamburger:hover::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color_option_bg);
+    border-radius:50% ;
+    width: 44px;
+    height: 44px;
+    left: 1px;
+    top:1px
+}
+
+.icon:hover::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color_option_bg);
+    border-radius:50% ;
+    width: 44px;
+    height: 44px;
+    left: 3px;
+    top:2px;
+}
+
+#talk:hover::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color_option_bg);
+    border-radius:50% ;
+    width: 44px;
+    height: 44px;
+    left: -1px;
+    top:1px;
+}
+
+#noti:hover::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color_option_bg);
+    border-radius:50% ;
+    width: 44px;
+    height: 44px;
+    left: 1px;
+    top:1px;
+}
+#search>form{
+    display: inline-block;
+    width: 708px;
+    height: 60px;
+    border: 1px solid #03c75a;
+    border-radius: 33px;
+    text-align: left;
+}
+
+#search-svg{
+    display: inline-block;
+    width: 68px;
+    margin-right: 12px;
+    height: 100%;
+    padding-left: 10px;
+
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
