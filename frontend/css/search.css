@@ -1,0 +1,118 @@
+
+#search>form{
+    position: absolute;
+    display: inline-flex;
+    top: 70px;
+    left: 307px;
+    z-index: 10; 
+    width: 706px;
+    height: 58px;
+    border: 1px solid #03c75a;
+    border-radius: 33px;
+    background-color: #fff;
+    text-align: center;
+}
+#search>form:hover{
+    box-shadow: 0 2px 4px 0 rgba (0,0,0,.12);
+}
+#search-svg
+{
+     position: relative;
+    display: inline-flex;
+    width: 68px;
+    height: 100%;
+    padding: 17px 16px 17px 27px;
+    margin-right: 12px;
+    align-items: center;
+}
+#search-keyboard ,#search-recent,#search-button{
+    background: transparent;
+    cursor: pointer;
+}
+
+#search-keyboard{
+    padding: 22px 3px 3px 22xp 
+}
+
+#search-recent{
+    padding:26px 6px ;
+}
+
+#search-button{
+    padding: 17px 27px 16px 10px ;
+}
+
+#search-svg svg{
+    position: absolute;
+    width: 24pxx;
+    height: 24px;
+    fill:#03c75a;
+}
+
+#search-input{
+    width: 480px;
+    height: 100%;
+    padding: 17px 0 ;
+    outline: none;
+    font-size: 2rem;
+    line-height: 24px;
+    font-weight: bold;
+    outline: none;
+}
+
+#search-input::placeholder{
+    color: white ;
+
+}
+
+#search-input:focus::placeholder{
+    color: rgb(230, 230, 230) ;
+
+}
+
+#search-right{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#search-keyboard::before{
+    content: "";
+    display: inline-block;
+    background-image: url(image/sp_main.ae81c9d5.png);
+    background-size: 444px 434px;
+    background-position: -270px -234px;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 14px;
+}
+
+#search-keyboard:hover::before{
+    filter: brightness(0.7);
+}
+
+
+#search-recent::before{
+    content: "";
+    display:inline-block;
+    background-image: url(image/sp_main.ae81c9d5.png);
+    background-size: 444px 434px;
+    background-position: -102px -272px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 6px;
+}
+
+#search-button::before{
+    content: "";
+    display: inline-block;
+    background-image: url(image/sp_main.ae81c9d5.png);
+    background-size: 444px 434px;
+    background-position: -364px -185px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}

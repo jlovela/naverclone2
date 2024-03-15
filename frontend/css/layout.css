@@ -12,7 +12,7 @@
     --color_search: #000;
     --color_search_rgb: 0, 0, 0;
     --color_border_out: #e3e5e8;
-    --color_border_out_rgb: 227, 229, 226;
+    --color_border_out_rgb: 227, 229, 232;
     --color_border_in: #ebebeb;
     --color_border_in_rgb: 235, 235, 235;
     --color_border_in_divider: #ebebeb;
@@ -62,162 +62,102 @@
     --color_dic: #031f5f;
     --color_dic_rgb: 3, 31, 95;
 }
+
 *{
     box-sizing: border-box;
-    margin:0;
-    background: none;    
-    padding: 0;
-    width:0px;
-    height: 0px;
     border: none;
-}
-html,body{
     background: none;
-    margin:0;
-    border: none;
 }
-
 #wrap{
     min-width: 1340px;
-    text-align: center;
+  
 }
 
 header{
     width: 1280px;
     height: 266px;
+    
 }
 #banner{
+    z-index: 120;
     position: relative;
-    width: 100%;
+    height: 156px;
+    padding: 70px 0 42px;
 }
-#hamburger,#pay,#talk,#noti{
+
+#hamburger,#naverPay,#talk,#noti{
     position: absolute;
     display: inline-block;
-    border: none;
-    padding: 10px;
     cursor: pointer;
-    background: none;
+    top: 7px;
+    padding: 10px;
+    background: 0;
+    border: 0;
+
 }
 
 #hamburger{
-    top: 18px;
-    left: 20px;
+    left: 12px;
 }
-#pay{
-    padding: 7px;
+#naverPay{
+    left:65px;
+    padding: 7px; 
+
 }
 
 #talk{
-    top: 25px;
-    right: 40px;
-}
-s
-#noti{
-    top: 25px;
-    right: 75px;
+    right: 28px;
 }
 
-#hamburger>div,.icon,#talk>div,#noti>div{
-    position: absolute;
+#noti{
+    right: -22px;
+}
+
+#hamburger>div,#talk>div,#noti>diV{
+    position: relative;
     width: 26px;
     height: 26px;
     background-size: 444px 434px;
-    background-repeat: no-repeat;
-    background-image: url(image/sp_main.ae81c9d5.png);
-    z-index: 1;
+    background-image: url(image/sp_main.ae81c9d5.png); 
+    background-repeat: no-repeat;   
 }
 
-#hamburger>div{
-   
-    background-position: -314px -330px; 
-}    
+#hamburger>div{ 
+    background-position: -314px -330px;
+}
 
 .icon{
-    display:inline-block;
-    left: 80px;
-    top: 25px;
-}
-
-.pay-icon{
-    width: 32px;
-    height: 32px;
-    background-size: 444px 434px;
+    position: relative;
+    display: inline-block;
+    background-image: url(image/sp_main.ae81c9d5.png);
+    background-repeat: no-repeat;
+    background-size: 444px 434px ;
     background-position: -295px -177px;
-    
-    z-index: 1;
-
+    width:32px;
+    height: 32px;
 }
+
 
 #talk>div{
-background-position: -364px -81px;
-}
+    background-position: -364px -81px;
+} 
 
 #noti>div{
     background-position: -364px -27px;
 }
-
-#hamburger:hover::after{
+#hamburger:hover::after,#naverPay:hover::after,#talk:hover::after,#noti:hover::after{
     content: "";
     position: absolute;
+    display: inline-block;
     background-color: var(--color_option_bg);
-    border-radius:50% ;
-    width: 44px;
-    height: 44px;
-    left: 1px;
-    top:1px
-}
-
-.icon:hover::after{
-    content: "";
-    position: absolute;
-    background-color: var(--color_option_bg);
-    border-radius:50% ;
-    width: 44px;
-    height: 44px;
-    left: 3px;
-    top:2px;
-}
-
-#talk:hover::after{
-    content: "";
-    position: absolute;
-    background-color: var(--color_option_bg);
-    border-radius:50% ;
-    width: 44px;
-    height: 44px;
-    left: -1px;
-    top:1px;
-}
-
-#noti:hover::after{
-    content: "";
-    position: absolute;
-    background-color: var(--color_option_bg);
-    border-radius:50% ;
-    width: 44px;
-    height: 44px;
+    border-radius: 50%;
     left: 1px;
     top:1px;
+    width: 44px;
+    height: 44px;
+    z-index: -1;
 }
-#search>form{
-    display: inline-block;
-    width: 708px;
-    height: 60px;
-    border: 1px solid #03c75a;
-    border-radius: 33px;
-    text-align: left;
-}
-
-#search-svg{
-    display: inline-block;
-    width: 68px;
-    margin-right: 12px;
-    height: 100%;
-    padding-left: 10px;
-
-}
-
-.blind {
+.blind{
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
