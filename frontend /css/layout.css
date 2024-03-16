@@ -68,6 +68,19 @@
     border: none;
     background: none;
 }
+html, body, form{
+    font-size: 10.5px;
+    line-height: 10.5px;
+    margin:0;
+    padding: 0;
+    font-family:-apple-system, BlinkMacSystemFont, "Malgun Dothic" "맑은 고딕" 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: -04px;
+}
+
+#form, ul{
+margin: 0;
+padding: 0;
+}
 #wrap{
     min-width: 1340px;
   
